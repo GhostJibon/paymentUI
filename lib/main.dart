@@ -1,3 +1,4 @@
+import 'package:amar_shohor/Screens/Add_Address/add_address.dart';
 import 'package:amar_shohor/Screens/Payment/payment_options.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
     return Sizer(builder: (context, orientation, deviceType) {
       return MaterialApp(
         title: 'Flutter Demo',
-        home: PaymentOptions(),
+        home: AddAddress(),
         debugShowCheckedModeBanner: false,
       );
     });

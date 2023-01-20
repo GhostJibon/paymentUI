@@ -33,9 +33,14 @@ class _PaymentOptionsState extends State<PaymentOptions> {
               fontWeight: FontWeight.w400,
               fontSize: 15.sp),
         ),
-        leading: Icon(
-          Icons.arrow_back,
-          color: Color(0xff196E55),
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Icon(
+            Icons.arrow_back,
+            color: Color(0xff196E55),
+          ),
         ),
       ),
       body: Padding(
@@ -100,6 +105,7 @@ class _PaymentOptionsState extends State<PaymentOptions> {
                           PO_MaserCard(isVisibleMaser: isVisibleMaser)
                         ],
                       ),
+                      // Visa Card Pay -------------------
                       Column(
                         children: [
                           GestureDetector(
