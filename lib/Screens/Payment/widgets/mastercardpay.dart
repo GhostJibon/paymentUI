@@ -1,3 +1,4 @@
+import 'package:amar_shohor/Screens/AddCard/addcard.dart';
 import 'package:amar_shohor/Screens/Payment/widgets/creditcardinfotext.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
@@ -171,31 +172,40 @@ class PO_MaserCard extends StatelessWidget {
                       ),
                       Padding(
                         padding: EdgeInsets.only(top: 1.5.h),
-                        child: Container(
-                          width: 80.w,
-                          height: 8.h,
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                            color: Color(0xffF4F4F4),
-                            borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(10),
-                                topRight: Radius.circular(10),
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10)),
-                          ),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const AddCreditCard()),
+                            );
+                          },
                           child: Container(
-                            width: 27.w,
-                            child: Row(
-                              children: [
-                                Icon(
-                                  Icons.add,
-                                  size: 20.sp,
-                                ),
-                                Text(
-                                  'Add Card',
-                                  style: TextStyle(fontSize: 14.sp),
-                                )
-                              ],
+                            width: 80.w,
+                            height: 8.h,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              color: Color(0xffF4F4F4),
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(10),
+                                  topRight: Radius.circular(10),
+                                  bottomLeft: Radius.circular(10),
+                                  bottomRight: Radius.circular(10)),
+                            ),
+                            child: Container(
+                              width: 27.w,
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    Icons.add,
+                                    size: 20.sp,
+                                  ),
+                                  Text(
+                                    'Add Card',
+                                    style: TextStyle(fontSize: 14.sp),
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         ),

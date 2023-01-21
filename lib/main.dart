@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return Sizer(builder: (context, orientation, deviceType) {
       return MaterialApp(
         title: 'Flutter Demo',
-        home: AddAddress(),
+        home: PaymentOptions(),
         debugShowCheckedModeBanner: false,
       );
     });
